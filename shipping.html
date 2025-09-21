@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Piraña Athletics — Envío</title>
+  <meta name="description" content="Información de envío para completar tu compra."/>
+  <style>
+:root{
+  --primary:#ea2a33;
+  --ink:#111827;
+  --bg:#ffffff;
+  --muted:#6b7280;
+  --border:#e5e7eb;
+  --surface:#f7f7f9;
+  --radius:14px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.5}
+img{max-width:100%; display:block}
+a{text-decoration:none; color:inherit}
+.container{max-width:1120px; margin:0 auto; padding:0 16px}
+.header{position:sticky; top:0; z-index:20; background:#fff; border-bottom:1px solid var(--border)}
+.header__inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0}
+.brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px}
+.brand__logo{width:28px; height:28px; color:var(--primary)}
+.nav{display:flex; gap:16px; color:#374151; font-weight:600}
+.nav a{padding:8px 10px; border-radius:9999px}
+.nav a:hover{background:#f3f4f6; color:#111}
+.btn{display:inline-block; padding:10px 16px; border-radius:9999px; font-weight:800}
+.btn--primary{background:var(--primary); color:#fff; box-shadow:0 10px 22px rgba(234,42,51,.22)}
+.btn--ghost{border:1px solid var(--border); background:#fff}
+.section{padding:40px 0}
+.h1{font-size:28px; margin:0 0 16px; letter-spacing:-.01em}
+.h2{font-size:24px; margin:0 0 12px}
+.muted{color:var(--muted)}
+.breadcrumbs{font-size:.95rem; color:var(--muted); padding:8px 0 0}
+/* Form */
+.form{max-width:720px}
+.label{display:block; font-weight:700; margin:12px 0 6px}
+.input, select{width:100%; padding:12px 14px; border:1px solid var(--border); border-radius:12px; background:#fff}
+.grid{display:grid; gap:12px}
+@media(min-width:720px){.grid--2{grid-template-columns:2fr 1fr}}
+.card{border:1px solid var(--border); border-radius:16px; padding:14px; background:#fff}
+.option{display:flex; align-items:center; gap:12px; padding:12px; border:1px solid var(--border); border-radius:12px; cursor:pointer}
+.option:has(input:checked){border-color:var(--primary); box-shadow:0 0 0 3px rgba(234,42,51,.12)}
+.footer{background:#0f172a; color:#e2e8f0; margin-top:48px}
+.footer__inner{padding:24px 0; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
+.footer a{color:#cbd5e1}
+.footer a:hover{color:#fff}
+</style>
+</head>
+<body>
+  
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__logo" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10"/>
+      </svg>
+      Piraña Athletics
+    </a>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="catalog.html">Novedades</a>
+      <a href="catalog.html">Hombre</a>
+      <a href="catalog.html">Mujer</a>
+      <a href="catalog.html">Accesorios</a>
+    </nav>
+    <div class="cta">
+      <a class="btn btn--ghost" href="login.html">Login</a>
+      <a class="btn btn--primary" href="cart.html">Carrito</a>
+    </div>
+  </div>
+</header>
+
+  <main class="section">
+    <div class="container">
+      <div class="breadcrumbs"><a href="cart.html">Carrito</a> / <strong>Envío</strong></div>
+      <h1 class="h1">Datos de envío</h1>
+
+      <form class="form" action="#" method="get">
+        <label class="label">Nombre completo</label>
+        <input class="input" type="text" placeholder="Tu nombre y apellidos" required>
+
+        <label class="label">Dirección</label>
+        <input class="input" type="text" placeholder="Calle 123, Barrio" required>
+
+        <div class="grid grid--2">
+          <div>
+            <label class="label">Ciudad</label>
+            <input class="input" type="text" placeholder="Ciudad" required>
+          </div>
+          <div>
+            <label class="label">Código postal</label>
+            <input class="input" type="text" placeholder="00000" required>
+          </div>
+        </div>
+
+        <label class="label">País</label>
+        <select required>
+          <option value="">Selecciona un país</option>
+          <option>Colombia</option>
+          <option>México</option>
+          <option>España</option>
+          <option>Estados Unidos</option>
+        </select>
+
+        <h2 class="h2" style="margin-top:18px">Método de envío</h2>
+        <div class="grid">
+          <label class="option">
+            <input type="radio" name="shipping" value="standard" checked>
+            <div><strong>Estándar (5–7 días)</strong><div class="muted">Gratis</div></div>
+          </label>
+          <label class="option">
+            <input type="radio" name="shipping" value="express">
+            <div><strong>Exprés (2–3 días)</strong><div class="muted">$10.00</div></div>
+          </label>
+        </div>
+
+        <div style="display:flex; gap:10px; margin-top:18px; flex-wrap:wrap">
+          <a class="btn btn--primary" href="index.html">Continuar a pago (demo)</a>
+          <a class="btn btn--ghost" href="cart.html">Volver al carrito</a>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="brand" style="color:#fff">
+      <svg class="brand__logo" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10"/>
+      </svg>
+      Piraña Athletics
+    </div>
+    <div style="color:#cbd5e1">© 2025 Piraña Athletics.</div>
+  </div>
+</footer>
+
+</body>
+</html>
