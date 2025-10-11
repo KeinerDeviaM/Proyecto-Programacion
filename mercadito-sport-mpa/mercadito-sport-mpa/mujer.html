@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <link rel="manifest" href="./assets/manifest.webmanifest">
+<meta name="theme-color" content="#ea2a33">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mercadito Sport — Mujer</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+</head>
+<body data-page="mujer">
+  <!-- Announcement Bar -->
+<div class="announce">
+  <div class="container row" style="justify-content:space-between">
+    <div class="row" style="gap:10px">
+      <span class="badge">🚚 Envío gratis desde $99.900</span>
+      <span class="meta">Cupón: <strong>SPORT10</strong></span>
+    </div>
+    <div class="meta">Termina en <strong id="promoTimer">00:00:00</strong></div>
+  </div>
+</div>
+
+  <header class="topbar">
+  <div class="container row" style="justify-content:space-between">
+    <div class="brand">🏷️ <span>Mercadito Sport</span> <span class="badge">MPA</span></div>
+    <nav id="nav" class="nav"></nav>
+    <div class="actions">
+      <button id="toggleTheme" class="btn outline small" title="Tema">🌓</button>
+      <a class="btn small" href="./novedades.html?cat=ofertas">Ofertas</a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="searchbar"><span class="icon">🔎</span><input id="q" placeholder="Buscar por deporte, prenda, marca…"></div>
+  </div>
+  <div class="subnav">
+    <div id="chips" class="container chips"></div>
+  </div>
+</header>
+  <section class="hero">
+  <div class="container split">
+    <div>
+      <h1 style="margin:0 0 6px">Mujer</h1>
+      <p class="meta">Explora colecciones deportivas, novedades, ofertas y más.</p>
+      <div class="row" style="gap:8px;margin-top:10px">
+        <a class="btn" href="./novedades.html?cat=novedades">Ver Novedades</a>
+        <a class="btn ghost" href="./hombre.html?cat=ofertas">Outlet Hombre</a>
+      </div>
+    </div>
+    <div class="card" style="min-height:120px"><div class="pad">
+      <div class="row" style="justify-content:space-between"><strong>Consejo</strong><span class="badge">Tip</span></div>
+      <p class="meta" style="margin-top:6px">Usa los filtros por <em>deporte, tipo y marca</em> para encontrar lo que buscas más rápido.</p>
+    </div></div>
+  </div>
+</section>
+  <main class="container" style="padding:18px 16px 24px;display:grid;gap:16px;grid-template-columns:280px 1fr">
+    <aside class="stickybox" style="display:block">
+  <div class="card" style="box-shadow:none">
+    <div class="pad">
+      <h3 style="margin:0 0 10px">Filtrar</h3>
+      <div class="section">
+        <div class="tag">Deportes</div>
+        <div id="sportBox" class="section" style="margin-top:6px"></div>
+      </div>
+      <div class="section">
+        <div class="tag">Tipos</div>
+        <div id="typeBox" class="section" style="margin-top:6px"></div>
+      </div>
+      <div class="section">
+        <div class="tag">Marcas</div>
+        <div id="brandBox" class="section" style="margin-top:6px"></div>
+      </div>
+      <div class="section">
+        <div class="tag">Ordenar</div>
+        <select id="sorter" style="width:100%;margin-top:6px;padding:8px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:inherit">
+          <option value="featured">Destacados</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+          <option value="rating">Mejor calificados</option>
+          <option value="reviews">Más reseñas</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</aside>
+    <section>
+      <div class="row" style="justify-content:space-between;margin-bottom:8px">
+        <div id="resultsCount" class="tag">0 resultados</div>
+      </div>
+      <div id="grid" class="grid"></div>
+    </section>
+  </main>
+  <div class="footer"><div class="container">© <span id="y"></span> Mercadito Sport — Demo. <span class="tag">Hecho para ti</span></div>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script></div>
+  <script src="./assets/app.js"></script>
+  <!-- Bottom Nav (mobile) -->
+<nav class="bottom-nav" aria-label="Navegación inferior">
+  <a href="./index.html" data-bnav="home">🏠<span>Inicio</span></a>
+  <a href="./novedades.html" data-bnav="search">🔎<span>Buscar</span></a>
+  <a href="./novedades.html" data-bnav="deals">🔥<span>Ofertas</span></a>
+  <a href="#" id="helpOpen" data-bnav="account">💬<span>Ayuda</span></a>
+</nav>
+
+<!-- Help Drawer (frontend) -->
+<div class="help-drawer" id="helpDrawer" aria-hidden="true">
+  <div class="help-box">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <strong>¿En qué te ayudamos?</strong>
+      <button id="helpClose" class="btn small outline">✕</button>
+    </div>
+    <div class="meta" style="margin:10px 0">Resuelve dudas rápidas:</div>
+    <ul style="margin:0;padding-left:16px">
+      <li>Envíos y devoluciones</li>
+      <li>Guías de tallas</li>
+      <li>Pagos y seguridad</li>
+      <li>Soporte por WhatsApp</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

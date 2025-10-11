@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+  <link rel="manifest" href="./assets/manifest.webmanifest">
+<meta name="theme-color" content="#ea2a33">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mercadito Sport — Inicio</title>
+  <link rel="stylesheet" href="./assets/style.css"/>
+</head>
+<body data-page="home">
+  <!-- Announcement Bar -->
+<div class="announce">
+  <div class="container row" style="justify-content:space-between">
+    <div class="row" style="gap:10px">
+      <span class="badge">🚚 Envío gratis desde $99.900</span>
+      <span class="meta">Cupón: <strong>SPORT10</strong></span>
+    </div>
+    <div class="meta">Termina en <strong id="promoTimer">00:00:00</strong></div>
+  </div>
+</div>
+
+  <!-- Header global con logo clickeable e “Inicio” en el menú -->
+  <header class="topbar">
+    <div class="container row" style="justify-content:space-between">
+      <a class="brand" href="./index.html">🏷️ <span>Mercadito Sport</span> <span class="badge">MPA</span></a>
+      <nav id="nav" class="nav"></nav>
+      <div class="actions">
+        <button id="toggleTheme" class="btn outline small" title="Tema">🌓</button>
+        <a class="btn small" href="./novedades.html">Ofertas</a>
+      </div>
+    </div>
+    <div class="container">
+      <div class="searchbar"><span class="icon">🔎</span><input id="q" placeholder="Buscar por deporte, prenda, marca…"></div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="bg"></div>
+    <div class="inner container">
+      <h1>Todo para tu deporte — hasta <span style="color:var(--primary)">-40%</span> hoy</h1>
+      <p>Fútbol, running, gym, basket y más. Novedades + ofertas que vuelan.</p>
+      <div class="row" style="justify-content:center;gap:8px">
+        <a class="btn" href="./novedades.html">Ver Novedades</a>
+        <a class="btn ghost" href="./hombre.html">Comprar Hombre</a>
+        <a class="btn ghost" href="./mujer.html">Comprar Mujer</a>
+      </div>
+      <div class="kpis">
+        <div class="kpi">🚚 Envío gratis desde $99.900</div>
+        <div class="kpi">↩️ Cambios 30 días</div>
+        <div class="kpi">🔒 Pago 100% seguro</div>
+        <div class="kpi">💬 Soporte 24/7</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tiles categorías -->
+  <section class="section">
+    <div class="container">
+      <div class="row" style="justify-content:space-between"><div class="title">Compra por categoría</div><a class="meta" href="./novedades.html">Ver todo →</a></div>
+      <div class="tiles" style="margin-top:10px">
+        <a class="tile" href="./hombre.html">
+          <img src="https://images.unsplash.com/photo-1521417531060-0a64f7fb6fc9?q=80&w=1600&auto=format&fit=crop" alt="Hombre">
+          <div class="ov"></div>
+          <div class="tx"><div class="h">Hombre</div><div class="p">Rendimiento y estilo</div><div class="btn small">Explorar</div></div>
+        </a>
+        <a class="tile" href="./mujer.html">
+          <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38?q=80&w=1600&auto=format&fit=crop" alt="Mujer">
+          <div class="ov"></div>
+          <div class="tx"><div class="h">Mujer</div><div class="p">Versátil y cómodo</div><div class="btn small">Explorar</div></div>
+        </a>
+        <a class="tile" href="./junior.html">
+          <img src="https://images.unsplash.com/photo-1599050751795-7712d2969d68?q=80&w=1600&auto=format&fit=crop" alt="Junior">
+          <div class="ov"></div>
+          <div class="tx"><div class="h">Línea Junior</div><div class="p">Tallas para peques</div><div class="btn small">Explorar</div></div>
+        </a>
+        <a class="tile" href="./novedades.html">
+          <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?q=80&w=1600&auto=format&fit=crop" alt="Novedades">
+          <div class="ov"></div>
+          <div class="tx"><div class="h">Novedades</div><div class="p">Lo último llegó</div><div class="btn small">Explorar</div></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra ofertas del día -->
+  <section class="section" style="padding-top:0">
+    <div class="container" style="background:var(--surface-2);border:1px solid var(--border);border-radius:14px;padding:10px 12px">
+      <div class="row" style="justify-content:space-between">
+        <div class="row" style="gap:8px"><span class="badge" style="background:#fff2f2;border-color:#ffdcdc;color:#c1121f">🔥 Ofertas del día</span><span class="meta">Termina en</span></div>
+        <div id="dealTimer" class="title" style="font-size:18px"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slider ofertas -->
+  <section class="section">
+    <div class="container">
+      <div class="row" style="justify-content:space-between"><div class="title">Descuentos que vuelan</div><a class="meta" href="./novedades.html">Ver más →</a></div>
+      <div id="homeSlider" class="carousel" style="margin-top:12px">
+        <div class="track"></div>
+        <button id="btnPrev" class="arrow prev">‹</button>
+        <button id="btnNext" class="arrow next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marcas -->
+  <section class="section" style="padding-top:10px">
+    <div class="container">
+      <div class="row" style="justify-content:space-between"><div class="title">Marcas que amamos</div></div>
+      <div id="homeBrands" class="brands" style="margin-top:10px"></div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="section">
+    <div class="container">
+      <div class="row" style="justify-content:space-between"><div class="title">Lo que dicen nuestros clientes</div></div>
+      <div class="testimonials" style="margin-top:12px">
+        <div class="quote"><div>“Llegó rapidísimo y la calidad es top. Definitivamente vuelvo a comprar.”</div><div class="who">— Ana G.</div></div>
+        <div class="quote"><div>“Las tallas coinciden perfecto con la guía, cero sorpresas.”</div><div class="who">— Camilo R.</div></div>
+        <div class="quote"><div>“Precios buenísimos y servicio al cliente super atento.”</div><div class="who">— Valentina P.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section">
+    <div class="container newsletter">
+      <div class="row" style="justify-content:space-between;gap:12px;flex-wrap:wrap">
+        <div><div class="title">Recibe ofertas y lanzamientos</div><div class="meta">10% OFF en tu primera compra al suscribirte</div></div>
+        <div class="row" style="gap:8px">
+          <input placeholder="Tu correo" style="padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:var(--surface);color:inherit;min-width:260px">
+          <button class="btn">Suscribirme</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div class="footer"><div class="container">© <span id="y"></span> Mercadito Sport — Demo. <span class="meta">Hecho para ti</span></div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </div>
+
+  <!-- Botón flotante a inicio (extra) -->
+  <a class="float-home btn outline" href="./index.html">Inicio ↑</a>
+
+  <script src="./assets/app.js"></script>
+  <!-- Bottom Nav (mobile) -->
+<nav class="bottom-nav" aria-label="Navegación inferior">
+  <a href="./index.html" data-bnav="home">🏠<span>Inicio</span></a>
+  <a href="./novedades.html" data-bnav="search">🔎<span>Buscar</span></a>
+  <a href="./novedades.html" data-bnav="deals">🔥<span>Ofertas</span></a>
+  <a href="#" id="helpOpen" data-bnav="account">💬<span>Ayuda</span></a>
+</nav>
+
+<!-- Help Drawer (frontend) -->
+<div class="help-drawer" id="helpDrawer" aria-hidden="true">
+  <div class="help-box">
+    <div class="row" style="justify-content:space-between;align-items:center">
+      <strong>¿En qué te ayudamos?</strong>
+      <button id="helpClose" class="btn small outline">✕</button>
+    </div>
+    <div class="meta" style="margin:10px 0">Resuelve dudas rápidas:</div>
+    <ul style="margin:0;padding-left:16px">
+      <li>Envíos y devoluciones</li>
+      <li>Guías de tallas</li>
+      <li>Pagos y seguridad</li>
+      <li>Soporte por WhatsApp</li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
